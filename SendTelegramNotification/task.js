@@ -82,7 +82,10 @@ function run() {
 
              const telegram = new Telegram(token, tgtools.getProxyCfg());
              chats.forEach(chat => {
-                 telegram.sendMessage(chat,body, {parse_mode: 'HTML'});   
+                 telegram.sendMessage(chat,body, {parse_mode: 'HTML'})
+                 .catch(err => {
+                     tl.setResult(tl.TaskResult.Failed, err.message);
+                 });
              });         
              console.log('Message sent!');
         }
