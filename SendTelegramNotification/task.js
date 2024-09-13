@@ -13,6 +13,11 @@ const Telegram = require('telegraf/telegram');
 const Telegraf = require('telegraf');
 const tgtools = require('./tgtools');
 
+function replacePlaceholders(message) {
+    return message.replace(/\${{([^}]+)}}/g, (match, p1) => {
+        return tl.getVariable(p1.trim()) || match;
+    });
+}
 
 if (tl.getBoolInput('getChatId',false)) {
     function run() {
@@ -62,7 +67,7 @@ function run() {
                 body += "\n<b>#" + tl.getVariable("Release.ReleaseName")+"</b>";
             }
              if (tl.getInput('message', false) !== null) {
-                 var message = tl.getInput('message', false);
+                 var message = replacePlaceholders(tl.getInput('message', false));
                  body += "\n" + message;
              }     
              if (tl.getBoolInput('buildQueuedBy', false)) {
