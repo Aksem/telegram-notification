@@ -60,6 +60,16 @@
         "visibleRule":"getChatId = false"
     },
     {
+        "name": "messageThreadId",
+        "type": "string",
+        "label": "Message Thread ID",
+        "defaultValue": "",
+        "required": false,
+        "groupName": "botConfig",
+        "helpMarkDown": "Target message thread id to notify (use comma as a delimiter). [More information about message thread id] ()",
+        "visibleRule":"getChatId = false"
+    },
+    {
         "name": "useProxy",
         "type": "boolean",
         "label": "Use proxy",
