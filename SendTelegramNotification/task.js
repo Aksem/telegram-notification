@@ -68,8 +68,10 @@ function run() {
             }
              if (tl.getInput('message', false) !== null) {
                  var message = replacePlaceholders(tl.getInput('message', false));
+                 message = message.replace(/\n/g, '<br>');
+                 message = message.replace(/%0A/g, '<br>');
                  body += "\n" + message;
-             }     
+             }
              if (tl.getBoolInput('buildQueuedBy', false)) {
                  var buildQueuedBy = tl.getVariable("Build.QueuedBy");
                  body += "\n<b>Build queued by:</b> " + buildQueuedBy;

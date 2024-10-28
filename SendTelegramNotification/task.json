@@ -130,7 +130,7 @@
         "defaultValue": "",
         "required": false,
         "groupName": "notificationData",
-        "helpMarkDown": "Custom text added to message. You can use [html markup](https://core.telegram.org/bots/api#html-style) (*optional*). You can also use environment variables in the format ${{ variable }}."
+        "helpMarkDown": "Custom text added to message. You can use [html markup](https://core.telegram.org/bots/api#html-style) (*optional*). You can also use environment variables in the format ${{ variable }}. Use \\n or %0A for line breaks."
     },
     {
         "name": "releaseName",
