@@ -2,7 +2,7 @@
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } catch (e) { reject(e); } }
         function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
@@ -44,6 +44,7 @@ else {
             try {
                 var token = tl.getInput('botToken', true);
                 var chats = tl.getDelimitedInput('chats', ',', false);
+                var messageThreadId = tl.getInput('messageThreadId', false);
                 var body = "";
 
                 if (tl.getBoolInput("taskStatus", false)) {
@@ -89,10 +90,14 @@ else {
 
                 const telegram = new Telegram(token, tgtools.getProxyCfg());
                 chats.forEach(chat => {
-                    telegram.sendMessage(chat, body, { parse_mode: 'HTML' })
-                    .catch(err => {
-                        tl.setResult(tl.TaskResult.Failed, err.message);
-                    });
+                    const options = { parse_mode: 'HTML' };
+                    if (messageThreadId) {
+                        options.message_thread_id = messageThreadId;
+                    }
+                    telegram.sendMessage(chat, body, options)
+                        .catch(err => {
+                            tl.setResult(tl.TaskResult.Failed, err.message);
+                        });
                 });
                 console.log('Message sent!');
             }

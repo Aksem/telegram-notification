@@ -73,3 +73,22 @@ There are some basic predefined features both for build and release tasks.
 *NOTE: USE EITHER RELEASE OR BUILD RELATED OPTIONS DEPENDING ON YOUR PROCESS*
 
 ![NotificationResult](https://raw.githubusercontent.com/JackB1ack/telegram-notification/master/Screenshots/notification.PNG)
+
+## Sending Messages to Specific Topics within Supergroups
+
+To send messages to a specific topic within a supergroup, you need to specify both `chat_id` and `message_thread_id`. The `message_thread_id` parameter allows you to target a specific thread within a supergroup.
+
+### Example Configuration
+
+Here is an example of how to configure the task to send messages to a specific topic within a supergroup:
+
+```json
+{
+  "botToken": "YOUR_BOT_TOKEN",
+  "chats": "-123456678",
+  "messageThreadId": "123456789",
+  "message": "This is a message to a specific topic within a supergroup."
+}
+```
+
+In this example, replace `YOUR_BOT_TOKEN` with your actual bot token, `-123456678` with the chat ID of the supergroup, and `123456789` with the message thread ID of the specific topic within the supergroup.
