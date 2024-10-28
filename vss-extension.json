@@ -1,9 +1,9 @@
 {
     "manifestVersion": 1,
-    "id": "telegram-notification-extension",
-    "name": "Telegram Notification",
-    "version": "0.1.1",
-    "publisher": "EvgenyChernyi",
+    "id": "telegram-notification-extension-2",
+    "name": "Telegram Notification 2",
+    "version": "2.0.0",
+    "publisher": "Aksem",
     "description": "Send custom notifications about your build/release process to Telegram",
     "targets": [
         {
@@ -45,7 +45,7 @@
     },
     "repository": {
         "type": "git",
-        "uri": "https://github.com/JackB1ack/telegram-notification"
+        "uri": "https://github.com/Aksem/telegram-notification"
     },
     "files": [ 
         {
