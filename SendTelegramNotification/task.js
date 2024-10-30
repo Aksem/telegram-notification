@@ -95,11 +95,13 @@ else {
                         options.message_thread_id = messageThreadId;
                     }
                     telegram.sendMessage(chat, body, options)
+                        .then(() => {
+                            console.log('Message sent!');
+                        })
                         .catch(err => {
                             tl.setResult(tl.TaskResult.Failed, err.message);
                         });
                 });
-                console.log('Message sent!');
             }
             catch (err) {
                 tl.setResult(tl.TaskResult.Failed, err.message);
