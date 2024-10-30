@@ -1,10 +1,10 @@
 // <a href="http://www.example.com/">inline URL</a>
 const SocksAgent = require('socks5-https-client/lib/Agent');
-const tl = require("vsts-task-lib/task");
+const tl = require("azure-pipelines-task-lib/task");
 
 exports.tglinkbuilder = function (href,linkText) {
     return "<a href=\""+ encodeURI(href) +"\">"+linkText+"</a>"
-}; 
+};
 
 exports.getProxyCfg = function (){
 var config = {};
