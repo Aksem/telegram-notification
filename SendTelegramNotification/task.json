@@ -14,9 +14,9 @@
   "version": {
     "Major": "2",
     "Minor": "0",
-    "Patch": "3"
+    "Patch": "4"
   },
-  "minimumAgentVersion": "1.95.0",
+  "minimumAgentVersion": "2.144.0",
   "instanceNameFormat": "Send Telegram Notification",
   "groups": [
     {
@@ -185,6 +185,14 @@
     "Node10": {
       "target": "task.js",
       "argumentFormat": ""
+    },
+    "Node16": {
+        "target": "task.js",
+        "argumentFormat": ""
+    },
+    "Node20_1": {
+        "target": "task.js",
+        "argumentFormat": ""
     }
   }
 }

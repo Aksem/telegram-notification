@@ -1,6 +1,6 @@
 {
   "name": "telegramnotifytask2",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Sends a message to Telegram chat",
   "main": "task.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "azure-pipelines-task-lib": "^4.17.3",
-    "https-proxy-agent": "^2.2.1",
+    "socks5-https-client": "^1.2.1",
     "telegraf": "^3.20.0"
   }
 }
