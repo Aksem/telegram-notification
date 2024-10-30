@@ -1,6 +1,6 @@
 {
-  "name": "telegramnotifytask",
-  "version": "1.0.0",
+  "name": "telegramnotifytask2",
+  "version": "2.0.2",
   "description": "Sends a message to Telegram chat",
   "main": "task.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "Telegram",
     "Notification"
   ],
-  "author": "Evgeny Chernyi",
+  "author": "Vladyslav Hnatiuk",
   "license": "MIT",
   "dependencies": {
     "https-proxy-agent": "^2.2.1",

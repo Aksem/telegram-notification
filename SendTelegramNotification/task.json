@@ -1,10 +1,10 @@
 {
-  "id": "03cc3c90-4737-11e8-adef-bd824f485eb1",
-  "name": "SendTelegramNotification",
-  "friendlyName": "Telegram Notification",
+  "id": "7dd9aa12-9255-43b7-9934-f24296126471",
+  "name": "SendTelegramNotification2",
+  "friendlyName": "Telegram Notification 2",
   "description": "Send custom message to telegram chat",
-  "author": "Evgeny Chernyi",
-  "helpMarkDown": "https://github.com/JackB1ack/telegram-notification",
+  "author": "Vladyslav Hnatiuk",
+  "helpMarkDown": "https://github.com/Aksem/telegram-notification",
   "category": "Utility",
   "visibility": [
     "Build",
@@ -12,9 +12,9 @@
   ],
   "demands": [],
   "version": {
-    "Major": "0",
-    "Minor": "1",
-    "Patch": "0"
+    "Major": "2",
+    "Minor": "0",
+    "Patch": "2"
   },
   "minimumAgentVersion": "1.95.0",
   "instanceNameFormat": "Send Telegram Notification",
@@ -47,7 +47,7 @@
         "defaultValue": "false",
         "required": false,
         "groupName": "botConfig",
-        "helpMarkDown": "Check this box **ONLY** if it's your first time running the task and you don't know chat ID. [**READ THIS FIRST**](https://github.com/JackB1ack/telegram-notification/blob/master/readme.md)"
+        "helpMarkDown": "Check this box **ONLY** if it's your first time running the task and you don't know chat ID. [**READ THIS FIRST**](https://github.com/Aksem/telegram-notification/blob/master/README.md)"
     },
     {
         "name": "chats",
