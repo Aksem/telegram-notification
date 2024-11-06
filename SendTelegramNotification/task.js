@@ -47,6 +47,11 @@ else {
                 var messageThreadId = tl.getInput('messageThreadId', false);
                 var body = "";
 
+                if (chats.length === 0) {
+                    tl.setResult(tl.TaskResult.Failed, "No chats are given");
+                    return;
+                }
+
                 if (tl.getBoolInput("taskStatus", false)) {
                     switch (tl.getVariable("Agent.JobStatus")) {
                         case "Succeeded":
